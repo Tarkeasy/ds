@@ -41,8 +41,8 @@
 
 // console.log(insertionSort([-1, -6, 3, 1, 9, 20, 2]))
 
-// Worst O(n^2) if every iteration pivot is the smallest number of the array or the greatest number
-// Average O(n logn) every iteration pivot in the middle or not the greatest ot the smallest number
+// Worst O(n^2) if every iteration pivot is the smallest number of the array or the greatest number of the array
+// Average O(n logn) every iteration pivot in the middle or not the greatest or the smallest number
 // function quickSort(arr) {
 // 	if (arr.length <= 1) {
 // 		return arr
