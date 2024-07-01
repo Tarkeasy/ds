@@ -14,6 +14,7 @@ const fibo = (n) => {
 
 console.log('fibo', fibo(7))
 
+// Complexity is O(n) with memo, without memo would be O(2^n)
 const memo = {}
 const fib = (n) => {
 

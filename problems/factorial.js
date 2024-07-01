@@ -15,19 +15,19 @@ const factorialRec = (n) => {
 console.log(factorialRec(5))
 
 
-// O(n)
-// const factorial = (n) => {
+//O(n)
+const factorial = (n) => {
 
-// 	if (n <= 1) {
-// 		return 1;
-// 	}
+	if (n <= 1) {
+		return 1;
+	}
 
-// 	let result = n
+	let result = n
 
-// 	for (let i = n; i > 1; i--) {
-// 		result *= i - 1;
-// 	}
-// 	return result;
-// }
+	for (let i = n; i > 1; i--) {
+		result *= i - 1;
+	}
+	return result;
+}
 
-// console.log(factorial(5))
+console.log(factorial(5))
