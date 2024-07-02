@@ -1,8 +1,8 @@
 // O(n)
 const factorialRec = (n) => {
 
-	if (n <= 1) {
-		return 1
+	if (n < 2) {
+		return n
 	}	
 				//5 * 24 = 120
 				//4 * 6 = 24
@@ -18,14 +18,10 @@ console.log(factorialRec(5))
 //O(n)
 const factorial = (n) => {
 
-	if (n <= 1) {
-		return 1;
-	}
-
 	let result = n
 
-	for (let i = n; i > 1; i--) {
-		result *= i - 1;
+	for (let i = 2; i < n; i++) {
+		result *= i;
 	}
 	return result;
 }
