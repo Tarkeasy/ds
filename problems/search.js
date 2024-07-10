@@ -35,23 +35,29 @@
 // console.log('result', binarySearch([2, 3, 5,18,20], 2))
 
 // O(logn)
-const recursiveBinarySearch = (arr, target, l, r) => {
-	let left = l;
-	let right = r;
-	const mid = Math.floor((left + right) / 2)
+const recursiveBinarySearch = (arr, target,) => {
+	const search = (arr, target, l, r) => {
+		let left = l;
+		let right = r;
+		const mid = Math.floor((left + right) / 2)
 
-	if (arr[mid] === target) {
-		return mid;
-	} else if (target < arr[mid]) {
-		right = mid - 1
-	} else {
-		left = mid + 1
-	}
-	if(left === right){
-		return -1;
+		if (arr[mid] === target) {
+			return mid;
+		} else if (target < arr[mid]) {
+			right = mid - 1
+		} if (target > arr[mid]) {
+			left = mid + 1
+		}
+		if (left > right) {
+			return -1;
+		}
+
+		return search(arr, target, left, right)
 	}
 
-	return recursiveBinarySearch(arr, target, left, right)
+	return search(arr, target, 0, arr.length - 1)
+
 }
+
 const arr = [2, 3, 5, 18, 20]
-console.log('result', recursiveBinarySearch(arr, 18, 0, arr.length - 1))
+console.log('result', recursiveBinarySearch(arr, 20, 0, arr.length - 1))
